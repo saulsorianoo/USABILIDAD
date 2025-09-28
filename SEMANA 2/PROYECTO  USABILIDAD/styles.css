@@ -1,0 +1,430 @@
+/* styles.css - Estilos para la Enciclopedia Médica */
+
+/* Variables de colores y fuentes */
+:root {
+  --primary-color: #2c7db1;
+  --secondary-color: #4ca1af;
+  --accent-color: #e74c3c;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size: 16px;
+  --line-height: 1.6;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--dark-color);
+  background-color: #f5f7fa;
+  padding: 0;
+  margin: 0;
+}
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--dark-color);
+  margin-top: 1.5rem;
+}
+
+/* Enlaces */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Contenedor principal */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+header h1 {
+  color: white;
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
+}
+
+header img {
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-top: 1rem;
+}
+
+/* Navegación principal */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+}
+
+nav li {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+nav li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+nav a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+/* Artículos y secciones */
+main {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin: 1rem auto 2rem;
+  max-width: 1200px;
+}
+
+article {
+  margin-bottom: 2rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+/* Listas */
+ul {
+  list-style-position: inside;
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+  box-shadow: var(--box-shadow);
+}
+
+/* Sección de Temas Destacados */
+section section {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin: 1.5rem 0;
+  border: 1px solid #e9ecef;
+}
+
+section section h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+section section p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+section section ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+section section li {
+  margin-bottom: 0.5rem;
+}
+
+section section img {
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--dark-color);
+  color: white;
+  margin-top: 2rem;
+}
+
+/* Página de error */
+figure {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+/* Estilos específicos para páginas de enfermedades */
+body > h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+  color: var(--primary-color);
+}
+
+/* Contenedor principal de páginas de enfermedad */
+body > main {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 1000px;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+/* Secciones de información de la enfermedad */
+body > main article section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--primary-color);
+}
+
+body > main article section h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+body > main article section p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* Imagen de la enfermedad */
+body > img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 90%;
+  border: 3px solid var(--secondary-color);
+}
+
+/* Sección de video */
+body > main article section:last-of-type {
+  text-align: center;
+  background-color: #e8f4f8;
+  border-left: 4px solid var(--secondary-color);
+}
+
+body > main article section:last-of-type a {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+/* Navegación de retorno */
+body > ul {
+  background-color: white;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+body > ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+body > ul li a {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  font-weight: 600;
+}
+
+body > ul li a:hover {
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* Texto "Por si quieres volver" */
+body > ul:before {
+  content: "Por si quieres volver";
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  :root {
+    --font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+  }
+  
+  section section img {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+  
+  /* Asegurar buen espaciado en móviles */
+  main, section, article {
+    padding: 1rem;
+  }
+  
+  /* Ajustes para páginas de enfermedad en móviles */
+  body > main {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  
+  body > main article section {
+    padding: 1rem;
+  }
+  
+  body > ul li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Utilidades */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: var(--transition);
+  margin: 0.5rem 0;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+/* Estilos específicos para la página principal */
+body > section {
+  padding: 1rem;
+}
+
+body > section > h2 {
+  padding-left: 0.5rem;
+}
